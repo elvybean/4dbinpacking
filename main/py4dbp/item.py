@@ -1,5 +1,5 @@
-from py4dbp.constants import RotationType, Axis
-from py4dbp.auxiliary_methods import intersect, set_to_decimal
+from py4dbp.constants import RotationType
+from py4dbp.auxiliary_methods import set_to_decimal
 
 DEFAULT_NUMBER_OF_DECIMALS = 3
 START_POSITION = [0, 0, 0]
