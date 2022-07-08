@@ -1,7 +1,8 @@
-3D Bin Packing
+ ~~3D Bin Packing~~ *4D Bin Packing*
 ====
-
-3D Bin Packing implementation based on [this paper](erick_dube_507-034.pdf). The code is based on [gedex](https://github.com/gedex/bp3d) implementation in Go.
+- because weight counts as a dimension in this context
+- ~~3D Bin Packing~~ *4D Bin Packing* implementation based on [this paper](erick_dube_507-034.pdf). 
+- The code is based on [gedex](https://github.com/gedex/bp3d) implementation in Go.
 
 ## Features
 1. Sorting Bins and Items:
@@ -11,12 +12,6 @@
     - ```[distribute_items=False]``` From a list of bins and items, try to put all the items in each bin and in the end it show per bin all the items that was fitted and the items that was not.
 3. Number of decimals:
     ```[number_of_decimals=X]``` Define the limits of decimals of the inputs and the outputs. By default is 3.
-
-## Install
-
-```
-pip install py3dbp
-```
 
 ## Basic Explanation
 
@@ -86,23 +81,13 @@ for b in packer.bins:
 
 ```
 
-## Latest Stable Version
-    py3dbp==1.1.2
-
-## Versioning
-- **1.x**
-    - Two ways to distribute items (all items in all bins - all items in each bin).
-    - Get per bin the fitted and unfitted items.
-    - Set the limit of decimals of inputs and outputs.
-- **0.x**
-    - Try to put all items in the first bin that can fit at least one.
-
 ## Credit
 
+* https://github.com/enzoruiz/3dbinpacking
 * https://github.com/bom-d-van/binpacking
 * https://github.com/gedex/bp3d
 * [Optimizing three-dimensional bin packing through simulation](erick_dube_507-034.pdf)
 
 ## License
 
-[MIT](./LICENSE)
+This project is licensed under the [MIT Lisence](https://choosealicense.com/licenses/mit/)
