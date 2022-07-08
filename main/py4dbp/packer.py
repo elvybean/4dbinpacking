@@ -1,7 +1,5 @@
-from py4dbp.constants import Axis
-
-DEFAULT_NUMBER_OF_DECIMALS = 3
-START_POSITION = [0, 0, 0]
+#from py4dbp.constants import Axis
+from py4dbp.maths_miscellaneous import Axis, MiscVars
 
 
 class Packer:
@@ -23,7 +21,7 @@ class Packer:
         fitted = False
 
         if not bin.items:
-            response = bin.put_item(item, START_POSITION)
+            response = bin.put_item(item, MiscVars.START_POSITION)
 
             if not response:
                 bin.unfitted_items.append(item)
@@ -66,7 +64,7 @@ class Packer:
 
     def pack(
         self, bigger_first=False, distribute_items=False,
-        number_of_decimals=DEFAULT_NUMBER_OF_DECIMALS
+        number_of_decimals=MiscVars.DEFAULT_NUMBER_OF_DECIMALS
     ):
         for bin in self.bins:
             bin.format_numbers(number_of_decimals)

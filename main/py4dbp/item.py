@@ -1,9 +1,6 @@
-from py4dbp.constants import RotationType
-from py4dbp.auxiliary_methods import set_to_decimal
-
-DEFAULT_NUMBER_OF_DECIMALS = 3
-START_POSITION = [0, 0, 0]
-
+#from py4dbp.constants import RotationType
+#from py4dbp.auxiliary_methods import set_to_decimal
+from py4dbp.maths_miscellaneous import RotationType, set_to_decimal, MiscVars
 
 class Item:
     def __init__(self, name, width, height, depth, weight):
@@ -13,8 +10,8 @@ class Item:
         self.depth = depth
         self.weight = weight
         self.rotation_type = 0
-        self.position = START_POSITION
-        self.number_of_decimals = DEFAULT_NUMBER_OF_DECIMALS
+        self.position = MiscVars.START_POSITION
+        self.number_of_decimals = MiscVars.DEFAULT_NUMBER_OF_DECIMALS
 
     def format_numbers(self, number_of_decimals):
         self.width = set_to_decimal(self.width, number_of_decimals)
