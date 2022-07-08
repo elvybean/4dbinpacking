@@ -29,6 +29,8 @@ for b in packer.bins:
     for item in b.items:
         print("====> ", item.string())
 
+    # if len of unfitted == 0 select bin
     print("UNFITTED ITEMS:")
+    #print(len(b.unfitted_items))
     for item in b.unfitted_items:
         print("====> ", item.string())
