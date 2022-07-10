@@ -7,12 +7,12 @@ packer = Packer()
 # Output according to yandiyacbm
 # ['euro-quarter', 1]
 
-packer.add_bin(Bin("standard-quarter",	1200, 1200, 800, 300))
+packer.add_bin(Bin("standard-quarter", 1200, 1200, 800, 300))
 packer.add_bin(Bin("standard-half", 1200, 1200, 1200, 600))
-packer.add_bin(Bin("standard",	1200, 1200, 2200, 1200))
-packer.add_bin(Bin("euro-quarter",	800, 1200, 800, 300))
+packer.add_bin(Bin("standard", 1200, 1200, 2200, 1200))
+packer.add_bin(Bin("euro-quarter", 800, 1200, 800, 300))
 packer.add_bin(Bin("euro-half", 800, 1200, 1200, 600))
-packer.add_bin(Bin("euro",	800, 1200, 2200, 1200))
+packer.add_bin(Bin("euro", 800, 1200, 2200, 1200))
 
 packer.add_item(Item('IH35-W Inner Carton', 670.0, 660.0, 50.0, 4.78))
 packer.add_item(Item('IH35-W Inner Carton', 670.0, 660.0, 50.0, 4.78))
