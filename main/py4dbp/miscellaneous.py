@@ -1,14 +1,27 @@
 from py4dbp.packer import Packer
 
 def select(packer: Packer):
-    for b in packer.bins:
-        if len(b.unfitted_items) == 0:
+    for Bin in packer.bins:
+        if len(Bin.unfitted_items) == 0:
             print("Appropriate bin found\n")
 
-            print(":::::::::::", b.string())
+            print(":::::::::::", Bin.string())
 
             print("FITTED ITEMS:")
-            for item in b.items:
+            for item in Bin.items:
                 print("====> ", item.string())
-
             return
+
+def orginal(packer: Packer):
+    for Bin in packer.bins:
+        print(":::::::::::", Bin.string())
+
+        print("FITTED ITEMS:")
+        for item in Bin.items:
+            print("====> ", item.string())
+
+        print("UNFITTED ITEMS:")
+        for item in Bin.unfitted_items:
+            print("====> ", item.string())
+            
+

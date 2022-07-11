@@ -1,4 +1,4 @@
-from py4dbp import Packer, Bin, Item, select
+from py4dbp import Packer, Bin, Item, select, orginal
 
 packer = Packer()
 
@@ -24,8 +24,8 @@ packer.add_item(Item('IH35-W Outer Carton', 700.0, 710.0, 250.0, 25.92))
 
 
 packer.pack()
-select(packer)
+orginal(packer)
 
-    #print("UNFITTED ITEMS:")
-    #for item in b.unfitted_items:
-    #    print("====> ", item.string())
+#print("UNFITTED ITEMS:")
+#for item in b.unfitted_items:
+#    print("====> ", item.string())
