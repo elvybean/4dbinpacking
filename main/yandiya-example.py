@@ -1,4 +1,4 @@
-from py4dbp import Packer, Bin, Item
+from py4dbp import Packer, Bin, Item, select
 
 packer = Packer()
 
@@ -14,23 +14,18 @@ packer.add_bin(Bin("euro-quarter", 800, 1200, 800, 300))
 packer.add_bin(Bin("euro-half", 800, 1200, 1200, 600))
 packer.add_bin(Bin("euro", 800, 1200, 2200, 1200))
 
+
 packer.add_item(Item('IH35-W Inner Carton', 670.0, 660.0, 50.0, 4.78))
 packer.add_item(Item('IH35-W Inner Carton', 670.0, 660.0, 50.0, 4.78))
+packer.add_item(Item('IH35-W Outer Carton', 700.0, 710.0, 250.0, 25.92))
+packer.add_item(Item('IH35-W Outer Carton', 700.0, 710.0, 250.0, 25.92))
 packer.add_item(Item('IH35-W Outer Carton', 700.0, 710.0, 250.0, 25.92))
 packer.add_item(Item('IH35-W Outer Carton', 700.0, 710.0, 250.0, 25.92))
 
 
 packer.pack()
+select(packer)
 
-for b in packer.bins:
-    print(":::::::::::", b.string())
-
-    print("FITTED ITEMS:")
-    for item in b.items:
-        print("====> ", item.string())
-
-    # if len of unfitted == 0 select bin
-    print("UNFITTED ITEMS:")
-    #print(len(b.unfitted_items))
-    for item in b.unfitted_items:
-        print("====> ", item.string())
+    #print("UNFITTED ITEMS:")
+    #for item in b.unfitted_items:
+    #    print("====> ", item.string())
